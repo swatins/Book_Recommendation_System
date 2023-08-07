@@ -2,7 +2,7 @@ import os
 import sys
 
 
-class AppException(Exception):
+class CustomException(Exception):
     """
     AppException is customized exception class designed to capture refined details about exception
     such as python script file line number along with error message
@@ -15,7 +15,7 @@ class AppException(Exception):
         :param error_message: error message in string format
         """
         super().__init__(error_message)
-        self.error_message = AppException.error_message_detail(error_message, error_detail=error_detail)
+        self.error_message = CustomException.error_message_detail(error_message, error_detail=error_detail)
 
     @staticmethod
     def error_message_detail(error:Exception, error_detail:sys):
@@ -37,7 +37,7 @@ class AppException(Exception):
         """
         Formating object of AppException
         """
-        return AppException.__name__.__str__()
+        return CustomException.__name__.__str__()
 
     def __str__(self):
         """

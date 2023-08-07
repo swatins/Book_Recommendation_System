@@ -1,0 +1,5 @@
+[2023-08-07 22:40:51,048] werkzeug - WARNING -  * Debugger is active!
+[2023-08-07 22:40:51,057] werkzeug - INFO -  * Debugger PIN: 111-902-916
+[2023-08-07 22:40:58,791] root - INFO - Error occurred python script name [F:\Machine_Learning\Intern\Book_Recommendation_System\demo.py] line number [11] error message [We are testing our custom exception file].
+[2023-08-07 22:40:58,791] root - INFO - We are testing logging module
+[2023-08-07 22:40:58,792] werkzeug - INFO - 127.0.0.1 - - [07/Aug/2023 22:40:58] "GET / HTTP/1.1" 200 -

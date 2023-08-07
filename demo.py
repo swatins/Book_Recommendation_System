@@ -1,6 +1,6 @@
 from flask import Flask
 from src.logger.logs import logging
-from src.exception.exception import AppException
+from src.exception.exception import CustomException
 import os, sys
 
 app = Flask(__name__)
@@ -10,7 +10,7 @@ def index():
     try:
         raise Exception("We are testing our custom exception file")
     except Exception as e:
-        customer = AppException(e, sys)
+        customer = CustomException(e, sys)
         logging.info(customer.error_message)
         logging.info("We are testing logging module")
         return "hello World"
@@ -19,7 +19,7 @@ def index():
 try:
     pass
 except Exception as e:
-    raise AppException(e, sys)
+    raise CustomException(e, sys)
 
 
 if __name__=="__main__":
